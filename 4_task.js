@@ -34,11 +34,22 @@ SAMPLE INPUT                                SAMPLE OUTPUT
 /*function signature/sample */
 function cashOut(money) {
     // You have to write your code here
-    
 
+    // Inner Test Case And Probable Error Handling with return the true value//
+    if (typeof money !== "number") {
+        return "Invalid";
+    }
+    else if (money < 0) {
+        return "Invalid";
+    }
+    else {
+        let charging = (money * 1.75) / 100;
+        let fixedcharg = charging.toFixed(4);
+        let finalCharg = parseFloat(fixedcharg);
+        return finalCharg;
+    }
 }
-
-
 // Main Function //
-const cashMony = 2000;
+const cashMony = 100;
 const Charge = cashOut(cashMony);
+console.log(Charge);
