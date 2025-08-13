@@ -33,16 +33,32 @@ SAMPLE INPUT                                                            SAMPLE O
 function calculateSleepTime(counting) {
 
     let totaltime = 0;
-    for(let i = 0; i <counting.length; i++ )
-    {
-        totaltime = totaltime + counting[i];
-
+    for (let i = 0; i < counting.length; i++) {
+        if (typeof counting[i] !== "number") {
+            return "Invalid";
+        }
+        else {
+            totaltime = totaltime + counting[i];
+        }
     }
-    console.log(totaltime);
+
+    let sleepSecond = totaltime;
+
+    let hour = Math.floor(sleepSecond / 3600); // 3600 sec for 1 hour //
+    let remaingSecound = sleepSecond % 3600;
+    let minute = Math.floor(remaingSecound / 60); // 60 sec for 1 min //
+    let second = remaingSecound % 60;
+
+    const TimeCounting =
+    {
+        hour: hour,
+        minute: minute,
+        second: second
+    };
+    return TimeCounting;
 }
 
 // main function //
-
-const sleepTime = [1000, 499, 519, 300];
+const sleepTime = [1000, 2000, 725];
 const finalResult = calculateSleepTime(sleepTime);
-// console.log(finalResult);
+console.log(finalResult);

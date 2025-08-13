@@ -40,15 +40,18 @@ SAMPLE INPUT                                                                SAMP
 { name: "toya", gender: "female", age: 24 },
 { name: "bjoy", gender: "male", age: 32 }                                       false
  
-"Mizan", { name: "mitu", gender: "male", age: 32 }                              Invalid
+"Mizan", 
+{ name: "mitu", gender: "male", age: 32 }                                       Invalid
 
-{ name: "mitu", gender: "male", age: 32 }, "Mizan"                              Invalid
+{ name: "mitu", gender: "male", age: 32 }, 
+"Mizan"                                                                         Invalid
 */
 
 
 function validProposal(person1, person2) {
 
-    if (typeof person1 !== "object" || typeof person2 !== "object") {
+    if(typeof person1 !== "object" || typeof person2 !== "object")
+    {
         return "Invalid"
     }
 
@@ -61,6 +64,7 @@ function validProposal(person1, person2) {
     }
 
     return true;
+
 }
 
 // main function and testing ground //
