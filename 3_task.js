@@ -13,8 +13,12 @@ Input                           Output
 
 // User Defined Function //
 function countVowels(str) {
+    // Inner Test Case And Probable Error Handling //
+    if (typeof str !== "string")
+    {
+        return "Invalid";
+    }
 
-    
     let totaLVow = 0;
     str = str.toLowerCase();
     for(let i = 0; i < str.length; i++)
@@ -27,6 +31,6 @@ function countVowels(str) {
 }
 
 // Main Function //
-const StR = "Jhankar miA";
+const StR = ["Jhankar miA"];
 const totalNumber = countVowels(StR);
 console.log(totalNumber);
