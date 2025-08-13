@@ -48,6 +48,10 @@ SAMPLE INPUT                                                                SAMP
 
 function validProposal(person1, person2) {
 
+    if (typeof person1 !== "object" || typeof person2 !== "object") {
+        return "Invalid"
+    }
+
     if (person1.gender === person2.gender) {
         return false
     }
@@ -57,11 +61,10 @@ function validProposal(person1, person2) {
     }
 
     return true;
-
 }
 
 // main function and testing ground //
-const clientA = { name: "Rahul", gender: "male", age: 28 };
-const clientB = { name: "Joya", gender: "female", age: 21 };
+const clientA = { name: "toya", gender: "female", age: 24 };
+const clientB = { name: "bjoy", gender: "male", age: 32 };
 const matchMaking = validProposal(clientA, clientB);
 console.log(matchMaking);
