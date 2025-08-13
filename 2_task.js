@@ -24,9 +24,8 @@ function sumOfArray(arr) {
             }
             else {
                 sum = sum + arr[i];
-
             }
-            i++;  
+            i++;
         }
         return sum;
     }
