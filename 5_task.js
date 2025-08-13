@@ -29,13 +29,12 @@ true                                                    "Invalid"
 
 
 function validContact(contact) {
-    // You have to write your code here
-    // inner test case Checking That user input must be string data type //
+    /* inner test case Checking That user input must be string data type or otherwise it will be considered Invalid input */
     if (typeof contact !== "string") {
-        return false;
+        return "Invalid";
     }
 
-    if (contact.startsWith("01") && typeof contact !== " " && contact.length === 11) {
+    if (contact.startsWith("01") && contact.includes(" ") === false && contact.length === 11) {
         return true;
     }
     else {
@@ -43,6 +42,6 @@ function validContact(contact) {
     }
 }
 
-const phoneNumber = "01345678900";
+const phoneNumber = "01819234567";
 const checkingReuslt = validContact(phoneNumber);
 console.log(checkingReuslt);
