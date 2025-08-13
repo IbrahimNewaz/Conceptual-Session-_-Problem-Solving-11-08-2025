@@ -59,6 +59,6 @@ function willSuccess(marks) {
 }
 
 // Main function Testing Ground //
-const exaMMark = false;
+const exaMMark = [60, 70, 80, 40, 30];
 const guideline = willSuccess(exaMMark);
 console.log(guideline);
