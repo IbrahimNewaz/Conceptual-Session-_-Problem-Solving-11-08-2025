@@ -1,14 +1,16 @@
 function sameArray(a, b) {
-
-    if(Array.isArray(a) === false || Array.isArray(b) === false)
-    {
+    // Error Handling //
+    // If It is Not Array This Function For Not Working //
+    if (Array.isArray(a) === false || Array.isArray(b) === false) {
         return "Invalid";
     }
 
+    // This Part of Code For Checking Both Arrays Length Are Same Or Not ? //
     if (a.length !== b.length) {
         return false;
     }
 
+    // This Part of Code For Checking Both Arrays Values //
     let i = 0;
     while (i < a.length) {
         if (a[i] !== b[i]) {
